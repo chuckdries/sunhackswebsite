@@ -47,15 +47,29 @@
             margin: 0;
         }
 
-        #top {
-            background: linear-gradient(183deg, #8c46cf, #fe883e);
-            background-size: 400% 400%;
-
+        #top{
+            height: 100vh;
+            width: 100vw;
+            /* background: black; */
             display: flex;
             flex-flow: column wrap;
             justify-content:center;
             align-content: center;
             align-items: center;
+        }
+        #top img{
+            width: 300px;
+            /* margin: auto; */
+        }
+        #top h3{
+            visibility: hidden;
+            /* margin: 0 auto; */
+            color: white;
+            font-weight: normal;
+        }
+        .grad {
+            background: linear-gradient(183deg, #8c46cf, #fe883e);
+            background-size: 400% 400%;
 
             -webkit-animation: SunhacksSunset 8s ease infinite;
             -moz-animation: SunhacksSunset 8s ease infinite;
@@ -64,22 +78,24 @@
             width: 100vw;
         
         }
-        #top img{
-            width: 300px;
-            /* margin: auto; */
-        }
-        #top h3{
-            /* margin: 0 auto; */
-            color: white;
-            font-weight: normal;
+        .grad h3{
+            visibility: visible !important;
         }
     </style>
+    <script>
+        function turnOn(){
+            // console.debug("turning on");
+            // document.getElementById("top").className = "grad";
+        }
+    </script>
 </head>
 
 <body>
-    <div id="top">
-        <img src="assets/white-center-wordmark.png" alt="Sun Hacks">
-        <h3>December 13 &bull; Phoenix, AZ</h3>
+    <div id="top" class="grad">
+        <a onclick="turnOn()" href="#">
+            <img src="assets/white-center-wordmark.png" alt="Sun Hacks">
+        </a>
+        <h3 id="date">December 13 &bull; Phoenix, AZ</h3>
     </div>
 </body>
 
