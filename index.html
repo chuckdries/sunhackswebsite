@@ -1,12 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>sunhacks</title>
+    <style>
+        @-webkit-keyframes SunhacksSunset {
+            0% {
+                background-position: 51% 0%
+            }
+            50% {
+                background-position: 50% 100%
+            }
+            100% {
+                background-position: 51% 0%
+            }
+        }
+
+        @-moz-keyframes SunhacksSunset {
+            0% {
+                background-position: 51% 0%
+            }
+            50% {
+                background-position: 50% 100%
+            }
+            100% {
+                background-position: 51% 0%
+            }
+        }
+
+        @keyframes SunhacksSunset {
+            0% {
+                background-position: 51% 0%
+            }
+            50% {
+                background-position: 50% 100%
+            }
+            100% {
+                background-position: 51% 0%
+            }
+        }
+
+        body {
+            margin: 0;
+        }
+
+        #top {
+            background: linear-gradient(183deg, #8c46cf, #fe883e);
+            background-size: 400% 400%;
+
+            display: flex;
+            flex-flow: column wrap;
+            justify-content:center;
+            align-content: center;
+            align-items: center;
+
+            -webkit-animation: SunhacksSunset 8s ease infinite;
+            -moz-animation: SunhacksSunset 8s ease infinite;
+            animation: SunhacksSunset 8s ease infinite;
+            height: 100vh;
+            width: 100vw;
+        
+        }
+        #top img{
+            width: 300px;
+            /* margin: auto; */
+        }
+        #top h3{
+            /* margin: 0 auto; */
+            color: white;
+            font-weight: normal;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div id="top">
+        <img src="assets/white-center-wordmark.png" alt="Sun Hacks">
+        <h3>December 13 &bull; Phoenix, AZ</h3>
+    </div>
 </body>
+
 </html>
