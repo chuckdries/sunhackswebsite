@@ -100,6 +100,7 @@
         }
 
         #cta {
+            color: white;
             width: 300px;
             font-family: Courier New, Courier, monospace;
         }
@@ -115,7 +116,7 @@
         }
 
         #cta a:hover::after {
-            content: "█";
+            content: " █";
             /* text-decoration: none !important; */
             animation: blink 1s ease infinite;
         }
@@ -144,7 +145,8 @@
         </a>
         <h3 id="date">March 2099 &bull; Phoenix, AZ</h3>
         <div id="cta">
-            <ul>
+            <span style="float: left; margin-top: 18px;">$></span>
+            <ul style="margin-left: 30px;">
                 <li>
                     <a href="#">Hack</a>
                 </li>
