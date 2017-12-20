@@ -81,11 +81,12 @@
             /* margin: 0 auto; */
             color: white;
             font-weight: normal;
-            font-family: Arial, Helvetica, sans-serif;
+            /* font-family: Arial, Helvetica, sans-serif; */
+            font-family: Courier New, Courier, monospace;
         }
 
         .grad {
-            background: linear-gradient(0deg, rgb(207, 181, 62) 4.75%, #FFA400 56%, #C83950 100%);
+            background: linear-gradient(0deg, #FFA400 5%, #C83950 100%);
             background-size: 400% 400%;
 
             -webkit-animation: SunhacksSunset 30s ease infinite;
@@ -109,11 +110,13 @@
         #cta a {
             color: white;
             padding: 3px;
+            margin-left: 32.5px;
         }
 
         #cta a:hover {
             background: rgba(0, 0, 0, 0.527);
             text-decoration: none;
+            margin-left: 0;
         }
 
         #cta a:hover::after {
@@ -122,6 +125,12 @@
             animation: blink 1s ease infinite;
         }
 
+        #cta a:hover::before {
+            content: "~$ ";
+            /* text-decoration: none !important; */
+            /* animation: blink 1s ease infinite; */
+            margin-left: 0px;
+        }
         #cta ul {
             padding: 0;
         }
@@ -144,8 +153,8 @@
             <img src="assets/logo-text-white.png" alt="Sun Hacks">
         <h3 id="date">March 2099 &bull; Phoenix, AZ</h3>
         <div id="cta">
-            <span style="float: left; margin-top: 18px;">~$</span>
-            <ul style="margin-left: 30px;">
+            <!-- <span style="float: left; margin-top: 18px;">~$</span> -->
+            <ul>
                 <li>
                     <a href="#">Hack</a>
                 </li>
