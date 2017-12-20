@@ -113,19 +113,19 @@
             margin-left: 32.5px;
         }
 
-        #cta a:hover {
+        #cta a.cli {
             background: rgba(0, 0, 0, 0.527);
             text-decoration: none;
             margin-left: 0;
         }
 
-        #cta a:hover::after {
+        .cli::after {
             content: " █";
             /* text-decoration: none !important; */
             animation: blink 1s ease infinite;
         }
 
-        #cta a:hover::before {
+        .cli::before {
             content: "~$ ";
             /* text-decoration: none !important; */
             /* animation: blink 1s ease infinite; */
@@ -141,7 +141,13 @@
         }
     </style>
     <script>
-        function turnOn() {
+        var active = [];
+        function turnOn(target) {
+            active.forEach(el=>{
+                el.className = "";
+            })
+            target.className = "cli";
+            active.push(target);
             // console.debug("turning on");
             // document.getElementById("top").className = "grad";
         }
@@ -154,22 +160,28 @@
         <h3 id="date">March 2099 &bull; Phoenix, AZ</h3>
         <div id="cta">
             <!-- <span style="float: left; margin-top: 18px;">~$</span> -->
-            <ul>
+            <ul >
                 <li>
-                    <a href="#">Hack</a>
+                    <a id="hack" href="#" onmouseover="turnOn(event.target)">Hack</a>
                 </li>
                 <li>
-                    <a href="#">Sponsor</a>
+                    <a href="#" onmouseover="turnOn(event.target)">Sponsor</a>
                 </li>
                 <li>
-                    <a href="#">Volunteer</a>
+                    <a href="#" onmouseover="turnOn(event.target)">Volunteer</a>
                 </li>
                 <li>
-                    <a href="#">Mentor</a>
+                    <a href="#" onmouseover="turnOn(event.target)">Mentor</a>
+                </li>
+                <li>
+                    <a href="#" onmouseover="turnOn(event.target)">About</a>
                 </li>
             </ul>
         </div>
     </div>
+    <script>
+        turnOn(hack);
+    </script>
 </body>
 
 </html>
