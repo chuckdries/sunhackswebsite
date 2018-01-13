@@ -172,61 +172,13 @@
 </head>
 
 <body>
-    <div id="top" class="grad">
+    <div id="top" class="grad" style="text-align:center;">
         <img src="assets/logo-text-white.png" alt="Sun Hacks">
-        <h3 id="date">March 2099 &bull; Phoenix, AZ</h3>
-        <div id="cta">
-            <!-- <span style="float: left; margin-top: 18px;">~$</span> -->
-            <ul>
-                <li>
-                    <a id="hack" href="#" onmouseover="turnOn(0)">Hack</a>
-                </li>
-                <li>
-                    <a id="sponsor" href="#" onmouseover="turnOn(1)">Sponsor</a>
-                </li>
-                <li>
-                    <a id="volunteer" href="#" onmouseover="turnOn(2)">Volunteer</a>
-                </li>
-                <li>
-                    <a id="mentor" href="#" onmouseover="turnOn(3)">Mentor</a>
-                </li>
-                <!-- <li>
-                    <a id="learn" href="#" onmouseover="turnOn(4)">Learn More</a>
-                </li> -->
-            </ul>
-        </div>
-        <!-- <p style="margin-bottom:-15vh">Scroll down to learn more.</p> -->
-        <p>Scroll down to learn more.</p>
+        <h3 id="date" style="margin-bottom:0;">Spring 2018</h3>
+	<h3 id="date" style="margin-top:0;">Tempe, AZ</h3>
+	<p><a href="mailto:industry@sunhacks.io" style="color:white; text-decoration: none;">Sponsors</a>&nbsp;&bull;&nbsp;<a href="mailto:team@sunhacks.io" style="color:white; text-decoration:none;">Questions</a></p>
+        <p>More Info Coming Soon</p>
     </div>
-    <div class="section" id="learn">
-        <div>
-            <h4>About Us</h4>
-        </div>
-        <div>
-            <h4>FAQ</h4>
-        </div>
-        <div>
-            <h4>FAQ</h4>
-        </div>
-        <div>
-            <h4>FAQ</h4>
-        </div>
-    </div>
-        <span style="display: block; height: 50vh;">take up space</span>
-    <script>
-        links = [
-            hack, sponsor, volunteer, mentor
-        ]
-        // turnOn(0);
-        document.onkeydown = function (event) {
-
-            if (event.keyCode == 38 && active > 0) {
-                turnOn(active - 1);
-            } else if (event.keyCode == 40 && active < 4) {
-                turnOn(active + 1);
-            }
-        }
-    </script>
 </body>
 
 </html>
