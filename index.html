@@ -68,8 +68,6 @@
             /* width: 100vw; */
             width: 100%;
             /* background: black; */
-            display: flex;
-            flex-flow: column wrap;
             justify-content: center;
             align-content: center;
             align-items: center;
@@ -84,12 +82,15 @@
         .grad {
             background: linear-gradient(0deg, #FFA400 5%, #C83950 100%);
             background-size: 400% 400%;
+            background-attachment: fixed;
 
             -webkit-animation: SunhacksSunset 50s ease infinite;
             -moz-animation: SunhacksSunset 50s ease infinite;
             animation: SunhacksSunset 50s ease infinite;
             height: 100vh;
             width: 100vw;
+        }
+        .test {
         }
 
 
@@ -134,9 +135,7 @@
         .section {
             max-width: 800px;
             margin: auto;
-            display: flex;
             justify-content: space-around;
-            flex-flow: row wrap;
             /* justify-items: center; */
             /* margin: 0; */
             /* padding: 0; */
@@ -154,22 +153,10 @@
             font-weight: normal;
         }
     </style>
-    <script>
-        var active = 0;
-        var links = [];
-
-        function turnOn(index) {
-            links[active].className = "";
-            links[index].className = "cli";
-            active = index;
-            // console.debug("turning on");
-            // document.getElementById("top").className = "grad";
-        }
-    </script>
 </head>
 
-<body>
-    <div id="top" class="grad" style="text-align:center;">
+<body class="grad">
+    <div id="top" class="test" style="text-align:center;">
         <img src="assets/logo-text-white.png" width="25%" alt="Sun Hacks">
         <h3 id="date" style="margin-bottom:0;">Coming Soon</h3>
 	<h3 id="date" style="margin-top:0;">Phoenix, AZ</h3>
@@ -178,8 +165,8 @@
 	<br />
 	<p>Follow us on Facebook and Twitter</p>
         <div>
-            <a href="https://www.facebook.com/sunhacksofficial/" target="_blank"><img src="assets/facebook-logo.png" width="7%" alt="facebook"/></a>
-            <a href="https://twitter.com/sun_hacks" target="_blank"><img src="assets/twitter-logo.png" width="7%" alt="twitter"/></a>
+            <a href="https://www.facebook.com/sunhacksofficial/" target="_blank"><img src="assets/facebook-logo.png" width="3%" alt="facebook"/></a>
+            <a href="https://twitter.com/sun_hacks" target="_blank"><img src="assets/twitter-logo.png" width="3%" alt="twitter"/></a>
         </div>
     </div>
 </body>
