@@ -68,6 +68,8 @@
             /* width: 100vw; */
             width: 100%;
             /* background: black; */
+            display: flex;
+            flex-flow: column wrap;
             justify-content: center;
             align-content: center;
             align-items: center;
@@ -82,7 +84,6 @@
         .grad {
             background: linear-gradient(0deg, #FFA400 5%, #C83950 100%);
             background-size: 400% 400%;
-            background-attachment: fixed;
 
             -webkit-animation: SunhacksSunset 50s ease infinite;
             -moz-animation: SunhacksSunset 50s ease infinite;
@@ -91,8 +92,6 @@
             width: 100vw;
             overflow-y: scroll; 
             overflow-x: hidden;
-        }
-        .test {
         }
 
 
@@ -137,7 +136,9 @@
         .section {
             max-width: 800px;
             margin: auto;
+            display: flex;
             justify-content: space-around;
+            flex-flow: row wrap;
             /* justify-items: center; */
             /* margin: 0; */
             /* padding: 0; */
@@ -155,6 +156,18 @@
             font-weight: normal;
         }
     </style>
+    <script>
+        var active = 0;
+        var links = [];
+
+        function turnOn(index) {
+            links[active].className = "";
+            links[index].className = "cli";
+            active = index;
+            // console.debug("turning on");
+            // document.getElementById("top").className = "grad";
+        }
+    </script>
 </head>
 
 <body class="grad">
