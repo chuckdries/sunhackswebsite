@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>sunhacks</title>
     <style>
         @-webkit-keyframes SunhacksSunset {
@@ -64,9 +65,7 @@
 
         #top {
             height: 100vh;
-            /* width: 100vw; */
             width: 100%;
-            /* background: black; */
             display: flex;
             flex-flow: column wrap;
             justify-content: center;
@@ -84,41 +83,50 @@
             font-weight: normal;
         }
 
-        .grad {
+        #top {
             background: linear-gradient(0deg, #FFA400 5%, #C83950 100%);
             background-size: 400% 400%;
 
             -webkit-animation: SunhacksSunset 50s ease infinite;
             -moz-animation: SunhacksSunset 50s ease infinite;
             animation: SunhacksSunset 50s ease infinite;
-            height: 100vh;
+            height: 110vh;
+            min-height: 740px;
             width: 100vw;
+
+            clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
         }
 
+        #top>img {
+            margin-top: -10vh;
+        }
+        #top a{
+            color: white;
+        }
 
         #cta {
             width: 300px;
         }
 
         #cta a {
-            color: white;
+
             padding: 3px;
             margin-left: 32.5px;
         }
 
-        #cta a.cli {
+        #cta a:hover {
             background: rgba(0, 0, 0, 0.527);
             text-decoration: none;
             margin-left: 0;
         }
 
-        .cli::after {
+        #cta a:hover::after {
             content: " █";
             /* text-decoration: none !important; */
             animation: blink 1s ease infinite;
         }
 
-        .cli::before {
+        #cta a:hover::before {
             content: "~$ ";
             /* text-decoration: none !important; */
             /* animation: blink 1s ease infinite; */
@@ -134,27 +142,33 @@
             padding: 0;
         }
 
-        .section {
+        .sections {
             max-width: 800px;
             margin: auto;
-            display: flex;
+            /* display: flex;
             justify-content: space-around;
-            flex-flow: row wrap;
+            flex-flow: row wrap; */
             /* justify-items: center; */
             /* margin: 0; */
             /* padding: 0; */
         }
-        .section>div{
-            width: 40%;
-            /* border: 1px solid #C83950; */
-            margin: 1em;
-            padding: 1em;
-            background:#C83950; 
-            box-shadow: 8px 8px 0px #FEE885, -16px 16px 0px #FFA400;
-            color: white;
-        }
-        .section>div h4{
+        .sections h4{
             font-weight: normal;
+        }
+        .sections>div{
+            margin-bottom: 5em;
+        }
+        .sections>div>div{
+            /* width: 40%; */
+            /* border: 1px solid #C83950; */
+            margin: 1em 0;
+            padding: 0.5em;
+            background:#C83950; 
+            color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+        }
+        .sections>div:nth-child(even)>div{
+            background: #FFA400;
         }
     </style>
     <script>
@@ -174,58 +188,70 @@
 <body>
     <div id="top" class="grad">
         <img src="assets/logo-text-white.png" alt="Sun Hacks">
-        <h3 id="date">March 2099 &bull; Phoenix, AZ</h3>
-        <div id="cta">
-            <!-- <span style="float: left; margin-top: 18px;">~$</span> -->
-            <ul>
-                <li>
-                    <a id="hack" href="#" onmouseover="turnOn(0)">Hack</a>
-                </li>
-                <li>
-                    <a id="sponsor" href="#" onmouseover="turnOn(1)">Sponsor</a>
-                </li>
-                <li>
-                    <a id="volunteer" href="#" onmouseover="turnOn(2)">Volunteer</a>
-                </li>
-                <li>
-                    <a id="mentor" href="#" onmouseover="turnOn(3)">Mentor</a>
-                </li>
-                <!-- <li>
-                    <a id="learn" href="#" onmouseover="turnOn(4)">Learn More</a>
-                </li> -->
-            </ul>
-        </div>
-        <!-- <p style="margin-bottom:-15vh">Scroll down to learn more.</p> -->
-        <p>Scroll down to learn more.</p>
-    </div>
-    <div class="section" id="learn">
-        <div>
-            <h4>About Us</h4>
-        </div>
-        <div>
-            <h4>FAQ</h4>
-        </div>
-        <div>
-            <h4>FAQ</h4>
-        </div>
-        <div>
-            <h4>FAQ</h4>
-        </div>
-    </div>
-        <span style="display: block; height: 50vh;">take up space</span>
-    <script>
-        links = [
-            hack, sponsor, volunteer, mentor
-        ]
-        // turnOn(0);
-        document.onkeydown = function (event) {
+        <div id="mastcontent">
+            <h3 id="date">April 6-8 &bull; Galvanize, Phoenix</h3>
+            <div id="cta">
+                <!-- <span style="float: left; margin-top: 18px;">~$</span> -->
+                <ul>
+                    <li>
+                        <a href="#hack" onmouseover="turnOn(0)">Hack</a>
+                    </li>
+                    <li>
+                        <a href="#sponsor" onmouseover="turnOn(1)">Sponsor</a>
+                    </li>
+                    <li>
+                        <a id="volunteer" href="#" onmouseover="turnOn(2)">Volunteer</a>
+                    </li>
+                    <li>
+                        <a id="mentor" href="#" onmouseover="turnOn(3)">Mentor</a>
+                    </li>
 
-            if (event.keyCode == 38 && active > 0) {
-                turnOn(active - 1);
-            } else if (event.keyCode == 40 && active < 4) {
-                turnOn(active + 1);
-            }
-        }
+                </ul>
+            </div>
+            <!-- <p style="margin-bottom:-15vh">Scroll down to learn more.</p> -->
+            <p>Scroll down to learn more.</p>
+            <a href="http://facebook.com/sunhacksofficial"><i class="fa fa-facebook" style="font-size:36px"></i></a>
+            <a href="https://twitter.com/sun_hacks"><i class="fa fa-twitter" style="font-size:36px"></i></a>
+        </div>
+
+    </div>
+    <div class="sections">
+        <div id="about">
+            <div>
+                <h4>About the 'thon</h4>
+            </div>
+            <p>Lorem ipsum dolor sit amet</p>
+            
+        </div>
+        <div id="hack">
+            <div>
+                <h4>Hackers</h4>
+            </div>
+            <p>asdf asdf asdf</p>
+            <p><a href="#">Register</a></p>
+        </div>
+        <div id="sponsor">
+            <div>
+                <h4>Sponsors</h4>
+            </div>
+            <p></p>
+        </div>
+        <div>
+            <div>
+                <h4>Volunteers</h4>
+            </div>
+            <p></p>
+        </div>
+        <div>
+            <div>
+                <h4>Mentors and Industry Partners</h4>
+            </div>
+            <p></p>
+        </div>  
+    
+    </div>
+    <script>
+
     </script>
 </body>
 
