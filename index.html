@@ -100,7 +100,8 @@
         #top>img {
             margin-top: -10vh;
         }
-        #top a{
+
+        #top a {
             color: white;
         }
 
@@ -108,25 +109,25 @@
             width: 300px;
         }
 
-        #cta a {
+        a {
 
             padding: 3px;
             margin-left: 32.5px;
         }
 
-        #cta a:hover {
+        a:hover {
             background: rgba(0, 0, 0, 0.527);
             text-decoration: none;
             margin-left: 0;
         }
 
-        #cta a:hover::after {
+        a:hover::after {
             content: " █";
             /* text-decoration: none !important; */
             animation: blink 1s ease infinite;
         }
 
-        #cta a:hover::before {
+        a:hover::before {
             content: "~$ ";
             /* text-decoration: none !important; */
             /* animation: blink 1s ease infinite; */
@@ -151,33 +152,63 @@
             /* justify-items: center; */
             /* margin: 0; */
             /* padding: 0; */
-        }
-        .sections h4{
-            margin: 2.5em 0 0 0;
             color: white;
+        }
+
+        .sections h4 {
+            margin: 2.5em 0 0 0;
             font-weight: normal;
             font-size: 2em;
         }
-        .sections>div{
+
+        .sections a {
+            color: white;
+        }
+
+        .sections>div {
             padding: 150px 0;
             margin: -180px 0 0 0;
             clip-path: polygon(0 200px, 100% 0, 100% calc(100% - 200px), 0 100%);
-            background:#C83950;
-            min-height: 400px; 
+            background: #C83950;
+            min-height: 400px;
         }
-        .sections>div:nth-child(even){
-            background: #FFA400;
+
+        .sections>div:nth-child(even) {
+            background: #FEE885;
+            color: black
         }
-        .sections>div>p{
+
+        .sections>div:nth-child(even) a {
+            color: black;
+        }
+
+        .sections>div:nth-child(even) a:hover {
+            color: white;
+        }
+
+        .sections>div>p {
             margin-left: 5px;
         }
-        .sections>div>div{
-            /* width: 40%; */
+
+        .sections>div>div {
             max-width: 800px;
-            /* border: 1px solid #C83950; */
             margin: 2em auto;
             padding: 1em;
         }
+        a.noCLI {
+            margin: unset;
+            text-decoration: none;
+        }
+        a.noCLI:hover{
+            background: none;
+        }
+        a.noCLI:hover::after{
+            content: none;
+        }
+        a.noCLI:hover::before{
+            content: none;
+        }
+
     </style>
     <script>
         var active = 0;
@@ -202,6 +233,12 @@
                 <!-- <span style="float: left; margin-top: 18px;">~$</span> -->
                 <ul>
                     <li>
+                        <a href="#about">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#about">Schedule</a>
+                    </li>
+                    <li>
                         <a href="#hack" onmouseover="turnOn(0)">Hack</a>
                     </li>
                     <li>
@@ -218,29 +255,55 @@
             </div>
             <!-- <p style="margin-bottom:-15vh">Scroll down to learn more.</p> -->
             <p>Scroll down to learn more.</p>
-            <a href="http://facebook.com/sunhacksofficial"><i class="fa fa-facebook" style="font-size:36px"></i></a>
-            <a href="https://twitter.com/sun_hacks"><i class="fa fa-twitter" style="font-size:36px"></i></a>
+            <a class="noCLI" href="http://facebook.com/sunhacksofficial">
+                <i class="fa fa-facebook" style="font-size:36px"></i>
+            </a>
+            <a class="noCLI" href="https://twitter.com/sun_hacks">
+                <i class="fa fa-twitter" style="font-size:36px"></i>
+            </a>
         </div>
 
     </div>
     <div class="sections">
         <div id="about">
             <div>
-                <h4>Info and Schedule</h4>
-                <p>Lorem ipsum dolor sit amet</p>
+                <h4>About</h4>
+                <p>Sun Hacks is a student-run organization based at Arizona State University. Collegiate hack-athons have been
+                    a fast-growing movement across the country — these events have brought together students from all backgrounds
+                    into a common space that embraces collaboration and creativity. Last year, we were able to bring this
+                    culture to Phoenix, Arizona embodied in Desert Hacks and SWHacks and we want to continue expanding this
+                    innovative community. Our vision this year is to bring hackers of all backgrounds together for a 36-hour
+                    session of bringing their ideas to life. By attracting students from around the country to our annual
+                    hackathon, we will cultivate the local tech community and provide students brand-new opportunities and
+                    connections.
+                </p>
+            </div>
+        </div>
+        <div id="about">
+            <div>
+                <h4>Schedule</h4>
+                <p>Insert schedule here</p>
             </div>
         </div>
         <div id="hack">
             <div>
                 <h4>Hackers</h4>
-                <p>asdf asdf asdf</p>
-                <p><a href="#">Register</a></p>
+                <p>Join us April 6-8 at Galvanize for 36 hours of creativity.</p>
+                <p>
+                    <a href="#hack">Register Here</a>
+                </p>
             </div>
         </div>
         <div id="sponsor">
             <div>
                 <h4>Sponsors</h4>
-                <p></p>
+                <p>This year, Sun Hacks will be a culmination of three successful past hackathons. We believe that with our
+                    conjoined efforts, we can host an even larger and more successful event that can become a mainstay for
+                    future generations of aspiring hackers. Through sponsoring Sun Hacks, you cultivate students’ technological
+                    growth across the nation. In addition to fostering student growth, your support will also benefit your
+                    own organization in many ways.
+                </p>
+                <p><a href="#sponsor">Download the packet to learn more</a></p>
             </div>
         </div>
         <div>
@@ -252,13 +315,13 @@
         <div>
             <div>
                 <h4>Mentors and Industry Partners</h4>
-                <p></p>
+                <p>Help our hackers out</p>
+                <p><a href="mailto:industry@sunhacks.io">Email is at industry@sunhacks.io</a></p>
             </div>
-        </div>  
-    
+        </div>
+
     </div>
     <script>
-
     </script>
 </body>
 
