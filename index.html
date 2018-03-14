@@ -166,9 +166,6 @@
         }
 
         .sections>div {
-            padding: 150px 0;
-            margin: -180px 0 0 0;
-            clip-path: polygon(0 200px, 100% 0, 100% calc(100% - 200px), 0 100%);
             background: #C83950;
             min-height: 400px;
         }
@@ -207,6 +204,15 @@
         }
         a.noCLI:hover::before{
             content: none;
+        }
+        @supports(-webkit-clip-path: polygon(0 200px, 100% 0, 100% calc(100% - 200px), 0 100%)) or (clip-path: polygon(0 200px, 100% 0, 100% calc(100% - 200px), 0 100%)) {
+
+            .sections>div{
+                clip-path: polygon(0 200px, 100% 0, 100% calc(100% - 200px), 0 100%);
+                -webkit-clip-path: polygon(0 200px, 100% 0, 100% calc(100% - 200px), 0 100%);
+                padding: 150px 0;
+                margin: -180px 0 0 0;
+            }
         }
 
     </style>
