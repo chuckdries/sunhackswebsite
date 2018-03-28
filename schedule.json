@@ -1,0 +1,50 @@
+{
+  "days": [{
+      "events": [{
+        "time": "6 Apr 2018 17:30 MST",
+        "event": "Volunteers and Sponsors arrive"
+      }, {
+        "time": "6 Apr 2018 19:00 MST",
+        "event": "Checkin for hackers"
+      }, {
+        "time": "6 Apr 2018 20:00 MST",
+        "event": "Dinner"
+      }, {
+        "time": "6 Apr 2018 21:30 MST",
+        "event": "Opening Ceremony"
+      }, {
+        "time": "6 Apr 2018 22:30 MST",
+        "event": "Hacking begins"
+      }, {
+        "time": "6 Apr 2018 23:30 MST",
+        "event": "Auditorium becomes sleeping room until 9AM"
+      }]
+    },
+    {
+      "events": [{
+        "time": "7 Apr 2018 7:30 MST",
+        "event": "Breakfast"
+      }, {
+        "time": "7 Apr 2018 12:00 MST",
+        "event": "Lunch"
+      }, {
+        "time": "7 Apr 2018 19:00 MST",
+        "event": "Dinner"
+      }]
+    },{
+      "events": [{
+        "time": "8 Apr 2018 0:00 MST",
+        "event": "Midnight Snack"
+      }, {
+        "time": "8 Apr 2018 7:30 MST",
+        "event": "Breakfast"
+      }, {
+        "time": "7 Apr 2018 9:00 MST",
+        "event": "Hacking Ends"
+      }, {
+        "time": "7 Apr 2018 11:00 MST",
+        "event": "Closing Ceremony and Awards"
+      }]
+    }
+  ]
+}
