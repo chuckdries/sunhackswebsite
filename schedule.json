@@ -22,7 +22,7 @@
     },
     {
       "events": [{
-        "time": "7 Apr 2018 7:30 MST",
+        "time": "7 Apr 2018 07:30 MST",
         "event": "Breakfast"
       }, {
         "time": "7 Apr 2018 12:00 MST",
@@ -33,13 +33,13 @@
       }]
     }, {
       "events": [{
-        "time": "8 Apr 2018 0:00 MST",
+        "time": "8 Apr 2018 00:00 MST",
         "event": "Midnight Snack"
       }, {
-        "time": "8 Apr 2018 7:30 MST",
+        "time": "8 Apr 2018 07:30 MST",
         "event": "Breakfast"
       }, {
-        "time": "7 Apr 2018 9:00 MST",
+        "time": "7 Apr 2018 09:00 MST",
         "event": "Hacking Ends"
       }, {
         "time": "7 Apr 2018 11:00 MST",
