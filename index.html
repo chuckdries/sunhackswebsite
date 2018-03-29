@@ -15,7 +15,7 @@
         gtag('config', 'UA-115751275-1');
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17-beta.0/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17-beta.0/vue.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -445,7 +445,6 @@
                     var xhr = new XMLHttpRequest();
                     xhr.addEventListener('load', function (response) {
                         this.schedule = JSON.parse(xhr.responseText);
-                        console.log(this.schedule);
                         this.loaded = true;
                     }.bind(this));
                     xhr.open('GET', 'schedule.json');
@@ -457,7 +456,6 @@
                     return moment(time).format('LT');
                 },
                 day(day) {
-                    console.log(day.events[0].time);
                     return moment(day.events[0].time).format('dddd');
                 }
             }
