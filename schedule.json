@@ -69,6 +69,42 @@
         {
           "time": "7 Apr 2018 11:00 MST",
           "event": "ReactJS workshop (Nebula 2)"
+        },
+        {
+          "time": "7 Apr 2018 13:00 MST",
+          "event": "Creating your first website using angular by SHPE (Nebula 1)"
+        },
+        {
+          "time": "7 Apr 2018 13:00 MST",
+          "event": "Unity Game Development Workshop (Nebula 2)"
+        },
+        {
+          "time": "7 Apr 2018 14:30 MST",
+          "event": "Magic Draft (Sun Spot)"
+        },
+        {
+          "time": "7 Apr 2018 16:00 MST",
+          "event": "Data Science Tech Talk (Nebula 1)"
+        },
+        {
+          "time": "7 Apr 2018 17:00 MST",
+          "event": "!Light (Nebula 1)"
+        },
+        {
+          "time": "7 Apr 2018 17:00 MST",
+          "event": "Board Games/Party Games (Sun Spot)"
+        },
+        {
+          "time": "7 Apr 2018 18:00 MST",
+          "event": "Coffee w/ WiCS (Nebula 2)"
+        },
+        {
+          "time":"7 Apr 2018 20:00 MST",
+          "event":"Docker Workshop by the CS Club (Nebula 1)"
+        },
+        {
+          "time":"7 Apr 2018 21:00 MST",
+          "event":"Silent Disco (SunSpot)"
         }
       ]
     },
@@ -85,6 +121,12 @@
         {
           "time": "7 Apr 2018 11:00 MST",
           "event": "Closing Ceremony and Awards"
+        }
+      ],
+      "activities":[
+        {
+          "time":"8 Apr 2018 01:00 MST",
+          "event":"Lip Sync Battle (SunSpot)"
         }
       ]
     }
