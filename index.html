@@ -197,11 +197,11 @@
 
         a.noCLI {
             margin: unset;
-            text-decoration: none;
+            text-decoration: underline;
         }
 
         a.noCLI:hover {
-            background: none;
+            /* background: none; */
         }
 
         a.noCLI:hover::after {
@@ -225,10 +225,11 @@
             padding-right: 1em;
         }
 
-        .sponsorlogo{
+        .sponsorlogo {
             height: 60px;
             margin: 0;
         }
+
         a {
             padding: 3px;
             margin-left: 32.5px;
@@ -286,37 +287,32 @@
     <div id="top" class="grad">
         <img src="assets/logo-text-white.png" alt="Sun Hacks">
         <div id="mastcontent">
-            <h3 id="date">April 6-8 &bull; Galvanize, Phoenix</h3>
+            <h3 id="date">Today at 7 &bull; Galvanize, Phoenix</h3>
             <div id="cta">
                 <!-- <span style="float: left; margin-top: 18px;">~$</span> -->
                 <ul>
                     <li>
-                        <a href="#about">About Us</a>
+                        <a href="#about">General Information</a>
                     </li>
                     <li>
                         <a href="#schedule">Schedule</a>
                     </li>
                     <li>
-                        <a href="#hack" onmouseover="turnOn(0)">Register</a>
+                        <a href="#map">Map</a>
                     </li>
                     <li>
-                        <a href="#sponsor" onmouseover="turnOn(1)">Sponsor</a>
+                        <a href="#sponsor">Sponsors</a>
                     </li>
                     <li>
-                        <a href="#volunteer" onmouseover="turnOn(2)">Volunteer</a>
+                        <a href="#prizes">Prize Categories</a>
                     </li>
-                    <li>
-                        <a href="#mentor" onmouseover="turnOn(3)">Mentor</a>
-                    </li>
-
                 </ul>
             </div>
-            <!-- <p style="margin-bottom:-15vh">Scroll down to learn more.</p> -->
-            <p>Scroll down to learn more.</p>
-            <a class="noCLI" href="http://facebook.com/sunhacksofficial">
+            <p>This site will be updated live throughout the hackathon.</p>
+            <a class="noCLI" style="text-decoration: none" href="http://facebook.com/sunhacksofficial">
                 <i class="fa fa-facebook" style="font-size:36px"></i>
             </a>
-            <a class="noCLI" href="https://twitter.com/sun_hacks">
+            <a class="noCLI" style="text-decoration: none" href="https://twitter.com/sun_hacks">
                 <i class="fa fa-twitter" style="font-size:36px"></i>
             </a>
         </div>
@@ -325,75 +321,142 @@
     <div class="sections">
         <div id="about">
             <div>
-                <h4>About</h4>
-                <p>Now partnered with SHPE.</p>
-                <p>Sun Hacks is a student-run hackathon at Arizona State University. Last year, we were able to bring this
-                    culture to Phoenix, Arizona embodied in Desert Hacks and SWHacks and we want to continue expanding this
-                    innovative community. Our vision this year is to bring hackers of all backgrounds together for a 36-hour
-                    session of bringing their ideas to life. By attracting students from around the country to our annual
-                    hackathon, we will cultivate the local tech community and provide students brand new opportunities and
-                    connections.
-                </p>
+                <h4>General Information</h4>
+                <ul>
+                    <li>
+                        Feeling unhappy, unsafe, or harrassed?
+                        <ul>
+                            <li>
+                                <a class="noCLI" href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf">http://static.mlh.io/docs/mlh-code-of-conduct.pdf</a>
+                            </li>
+                            <li>
+                                <a class="noCLI" href="mailto:incidents@mhl.io">incidents@mlh.io</a>
+                            </li>
+                            <li>Talk to an organizer</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Project submissions
+                        <ul>
+                            <li>We handle submissions through Devpost</li>
+                            <li><a class="noCLI" href="http://sunhacks.devpost.com/">http://sunhacks.devpost.com/</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        Join Slack for announcements and chat
+                        <ul>
+                            <li>
+                                <a class="noCLI" href="https://tinyurl.com/sunhacks18-slack-join">https://tinyurl.com/sunhacks18-slack-join</a>
+                            </li>
+                            <li>Already in? <a class="noCLI" href="https://sunhacks-spring2018.slack.com">https://sunhacks-spring2018.slack.com</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        Want some toys to play with?
+                        <ul>
+                            <li>Come request hardware at the front!</li>
+                            <li>A government issued ID needs to be exchanged for Hardware.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Want an Octocat figurine?
+                        <ul>
+                            <li>Draw your best SunHacks Octocat by April 8th and tweet a photo to @GitHubEducation with #SunHacks #MyOctocat and you could win your very own Octocat figurine. Find your inspiration in the <a class="noCLI" href="https://octodex.github.com/">Github Octodex</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        The Cheat Sheet by Github and MLH:
+                        <ul>
+                            <li><a class="noCLI" href="http://bit.ly/shcheatsheet">http://bit.ly/shcheatsheet</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
         <div id="schedule">
-            <div>
-                <h4>Schedule</h4>
-                <div id="schedule">
-                    <!-- <a @click="fetchSchedule">Refresh schedule</a> -->
-                    <div v-if="schedule">
-                        <div v-for="day in schedule.days">
-                            <h5> {{day | day}} </h5>
-                            <table>
-                                <colgroup>
-                                    <col class="schedule-time">
-                                    <col class="schedule-event">
-                                </colgroup>
-                                <tr v-for="event in day.events">
-                                    <td class="right v-top">{{event.time | time}}</td>
-                                    <td>{{event.event}}</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <div v-if="!schedule">loading schedule</div>
+            <div v-if="schedule">
+                <h4>General Schedule</h4>
+                <div v-for="day in schedule.days">
+                    <h5> {{day | day}} </h5>
+                    <table>
+                        <colgroup>
+                            <col class="schedule-time">
+                            <col class="schedule-event">
+                        </colgroup>
+                        <tr v-for="event in day.events">
+                            <td class="right v-top">{{event.time | time}}</td>
+                            <td>{{event.event}}</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
+            <div v-if="schedule">
+                <h4>Workshops and Activities</h4>
+                <div v-for="day in schedule.days">
+                    <h5> {{day | day}} </h5>
+                    <table>
+                        <colgroup>
+                            <col class="schedule-time">
+                            <col class="schedule-event">
+                        </colgroup>
+                        <tr v-for="event in day.activities">
+                            <td class="right v-top">{{event.time | time}}</td>
+                            <td>{{event.event}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div v-if="!schedule">loading schedule</div>
         </div>
-        <div id="hack">
+        <div id="map">
             <div>
-                <h4>Hackers</h4>
-                <p>Join us April 6-8 at Galvanize for 36 hours of creativity.</p>
-                <p>
-                    <a href="https://sunhacks.typeform.com/to/xW2O8C" target="_blank">Register Here</a>
-                </p>
+                <h4>Maps</h4>
+                <ul style="list-style: none; padding-left: 0">
+                    <li><a href="assets/final_map_first floor.png">First Floor</a></li>
+                    <li><a href="assets/final_map_lower level.png">Lower Level</a></li>
+                    <li><a href="assets/final_map_mezzanine.png">Mezzanine</a></li>
+                </ul>
             </div>
         </div>
         <div id="sponsor">
             <div>
                 <h4>Sponsors</h4>
-                <p>This year, Sun Hacks will be a culmination of three successful past hackathons. We believe that with our
-                    conjoined efforts, we can host an even larger and more successful event that can become a mainstay for
-                    future generations of aspiring hackers. Through sponsoring Sun Hacks, you cultivate students’ technological
-                    growth across the nation. In addition to fostering student growth, your support will also benefit your
-                    own organization in many ways.
-                </p>
-                <p>
-                    <a href="mailto:industry@sunhacks.io">Send us an email to learn more!</a>
-                </p>
                 <h5>We are proudly supported by</h5>
                 <ul style="list-style: none">
-                    <li><img class="sponsorlogo" alt="galvanize" src="sponsorlogos/galvanize.png" /></li>
-                    <li><img class="sponsorlogo" style="height: 150px;" alt="amazon" src="sponsorlogos/amazon_white_transparent.png" /></li>
-                    <li><img class="sponsorlogo" alt="state farm" src="sponsorlogos/Horizontal SF Logo.png" /></li>
-                    <li><img class="sponsorlogo" alt="garmin" src="sponsorlogos/Garmin_logo_2006.svg.png" /></li>
-                    <li><img class="sponsorlogo" alt="godaddy" src="sponsorlogos/godaddy-logo.png" /></li>
-                    <li><img class="sponsorlogo" alt="general dynamics" src="sponsorlogos/General-Dynamics-Logo-PNG-Transparent.png" /></li>
-                    <li><img class="sponsorlogo" alt="github" src="sponsorlogos/github.png" /></li>
-                    <li><img class="sponsorlogo" alt="ticketmaster" src="sponsorlogos/ticketmaster-transparent.png" /></li>
-                    <li><img class="sponsorlogo" alt="Olivia" src="sponsorlogos/paradox-oliva.png" /></li>
-                    <li><img class="sponsorlogo" alt="Paypal" src="sponsorlogos/FullColor_Horizontal_Logo_RGB.png" /></li>
-                    <li><img class="sponsorlogo" alt="Silent Events" src="sponsorlogos/Silent-Events-Logo-Web-Ready-Black1.jpg" /></li>
+                    <li>
+                        <img class="sponsorlogo" alt="galvanize" src="sponsorlogos/galvanize.png" />
+                    </li>
+                    <li>
+                        <img class="sponsorlogo" style="height: 150px;" alt="amazon" src="sponsorlogos/amazon_white_transparent.png" />
+                    </li>
+                    <li>
+                        <img class="sponsorlogo" alt="state farm" src="sponsorlogos/Horizontal SF Logo.png" />
+                    </li>
+                    <li>
+                        <img class="sponsorlogo" alt="garmin" src="sponsorlogos/Garmin_logo_2006.svg.png" />
+                    </li>
+                    <li>
+                        <img class="sponsorlogo" alt="godaddy" src="sponsorlogos/godaddy-logo.png" />
+                    </li>
+                    <li>
+                        <img class="sponsorlogo" alt="general dynamics" src="sponsorlogos/General-Dynamics-Logo-PNG-Transparent.png" />
+                    </li>
+                    <li>
+                        <img class="sponsorlogo" alt="github" src="sponsorlogos/github.png" />
+                    </li>
+                    <li>
+                        <img class="sponsorlogo" alt="ticketmaster" src="sponsorlogos/ticketmaster-transparent.png" />
+                    </li>
+                    <li>
+                        <img class="sponsorlogo" alt="Olivia" src="sponsorlogos/paradox-oliva.png" />
+                    </li>
+                    <li>
+                        <img class="sponsorlogo" alt="Paypal" src="sponsorlogos/FullColor_Horizontal_Logo_RGB.png" />
+                    </li>
+                    <li>
+                        <img class="sponsorlogo" alt="Silent Events" src="sponsorlogos/Silent-Events-Logo-Web-Ready-Black1.jpg" />
+                    </li>
+                    <li><img class="sponsorlogo" src="sponsorlogos/yogatothepeople.png" alt="Yoga To The People" /></li>
                     <li>Facebook</li>
                     <li>Dash</li>
                     <li>OSIsoft</li>
@@ -401,22 +464,21 @@
                 <!-- <p>LIST SPONSORS HERE</p> -->
             </div>
         </div>
-        <div id="volunteer">
-            <div>
-                <h4>Volunteers</h4>
-                <p>Join us</p>
-                <p>
-                    <a href="https://sunhacks.typeform.com/to/S8S4Ua">Sign up here to volunteer.</a>
-                </p>
-            </div>
-        </div>
         <div>
-            <div id="mentor">
-                <h4>Mentors and Industry Partners</h4>
-                <p>Help our hackers out!</p>
-                <p>
-                    <a href="mailto:industry@sunhacks.io">Email us at industry@sunhacks.io</a>
-                </p>
+            <div id="prizes">
+                <h4>Prize Categories</h4>
+                <ul>
+                    <li>Best Overall
+                        <ul>
+                            <li>First, second, and third place</li>
+                        </ul>
+                    </li>
+                    <li>Best Beginner Hack</li>
+                    <li>Best UI/UX</li>
+                    <li>Greatest Social Impact</li>
+                    <li>Best Use of Hardware</li>
+                </ul>
+                We'll be using Devpost to handle submissions, details about prize categories can be found there. <a class="noCLI" href="http://sunhacks.devpost.com/">http://sunhacks.devpost.com/</a>
             </div>
         </div>
 
@@ -458,6 +520,10 @@
                 },
                 day(day) {
                     return moment(day.events[0].time).format('dddd');
+                },
+                test(data){
+                    console.log(data);
+                    return data;
                 }
             }
         })
