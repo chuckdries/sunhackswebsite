@@ -1,0 +1,134 @@
+{
+  "days": [
+    {
+      "events": [
+        {
+          "time": "6 Apr 2018 17:30 MST",
+          "event": "Volunteers and Sponsors arrive"
+        },
+        {
+          "time": "6 Apr 2018 19:00 MST",
+          "event": "Checkin for hackers"
+        },
+        {
+          "time": "6 Apr 2018 20:00 MST",
+          "event": "Dinner + Sponsor Fair"
+        },
+        {
+          "time": "6 Apr 2018 21:30 MST",
+          "event": "Opening Ceremony"
+        },
+        {
+          "time": "6 Apr 2018 22:30 MST",
+          "event": "Hacking begins"
+        },
+        {
+          "time": "6 Apr 2018 23:30 MST",
+          "event": "Auditorium becomes sleeping room until 9AM"
+        }
+      ],
+      "activities": [
+        {
+          "time": "6 Apr 2018 23:00 MST",
+          "event": "How to build a website by Github (Nebula 1)"
+        }
+      ]
+    },
+    {
+      "events": [
+        {
+          "time": "7 Apr 2018 07:30 MST",
+          "event": "Breakfast"
+        },
+        {
+          "time": "7 Apr 2018 12:00 MST",
+          "event": "Lunch"
+        },
+        {
+          "time": "7 Apr 2018 19:00 MST",
+          "event": "Dinner"
+        }
+      ],
+      "activities": [
+        {
+          "time": "7 Apr 2018 00:00 MST",
+          "event": "How to build a web app start to finish (Nebula 2)"
+        },
+        {
+          "time": "7 Apr 2018 01:00 MST",
+          "event": "VR Dev Environments by Statefarm (Sun Spot)"
+        },
+        {
+          "time": "7 Apr 2018 09:00 MST",
+          "event": "Yoga by Yoga for the People (Sun Spot)"
+        },
+        {
+          "time": "7 Apr 2018 10:00 MST",
+          "event": "Big Data Engineering by Amazon (Nebula 1)"
+        },
+        {
+          "time": "7 Apr 2018 11:00 MST",
+          "event": "ReactJS workshop (Nebula 2)"
+        },
+        {
+          "time": "7 Apr 2018 13:00 MST",
+          "event": "Creating your first website using angular by SHPE (Nebula 1)"
+        },
+        {
+          "time": "7 Apr 2018 13:00 MST",
+          "event": "Unity Game Development Workshop (Nebula 2)"
+        },
+        {
+          "time": "7 Apr 2018 14:30 MST",
+          "event": "Magic Draft (Sun Spot)"
+        },
+        {
+          "time": "7 Apr 2018 16:00 MST",
+          "event": "Data Science Tech Talk (Nebula 1)"
+        },
+        {
+          "time": "7 Apr 2018 17:00 MST",
+          "event": "!Light (Nebula 1)"
+        },
+        {
+          "time": "7 Apr 2018 17:00 MST",
+          "event": "Board Games/Party Games (Sun Spot)"
+        },
+        {
+          "time": "7 Apr 2018 18:00 MST",
+          "event": "Coffee w/ WiCS (Nebula 2)"
+        },
+        {
+          "time":"7 Apr 2018 20:00 MST",
+          "event":"Docker Workshop by the CS Club (Nebula 1)"
+        },
+        {
+          "time":"7 Apr 2018 21:00 MST",
+          "event":"Silent Disco (SunSpot)"
+        }
+      ]
+    },
+    {
+      "events": [
+        {
+          "time": "8 Apr 2018 07:30 MST",
+          "event": "Breakfast"
+        },
+        {
+          "time": "7 Apr 2018 09:30 MST",
+          "event": "Hacking Ends"
+        },
+        {
+          "time": "7 Apr 2018 12:00 MST",
+          "event": "Closing Ceremony and Awards"
+        }
+      ],
+      "activities":[
+        {
+          "time":"8 Apr 2018 01:00 MST",
+          "event":"Lip Sync Battle (SunSpot)"
+        }
+      ]
+    }
+  ]
+}
